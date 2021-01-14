@@ -30,7 +30,7 @@ def normalize_example(img):
 
 
 def predict_cataract(image_path):
-    model_path = get_full_path('custom_model_with_activator.h5')
+    model_path = get_full_path('../custom_model_with_activator.h5')
 
     loaded_model = tf.keras.models.load_model(
           model_path,
@@ -47,3 +47,4 @@ def predict_cataract(image_path):
 
     print('Custom Model\nDiagnosis: cataract with {:.2f}% probability'.format(result_percent))
     return result_percent
+    
